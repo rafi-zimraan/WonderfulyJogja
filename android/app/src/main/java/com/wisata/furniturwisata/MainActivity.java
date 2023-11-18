@@ -1,0 +1,6 @@
+package com.wisata.furniturwisata;
+
+import io.flutter.embedding.android.FlutterActivity;
+
+public class MainActivity extends FlutterActivity {
+}
