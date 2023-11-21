@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ButtonLogin extends StatefulWidget {
-  final BuildContext context;
+class ButtonLogin extends StatelessWidget {
   final String title;
   final Function onTap;
 
-  const ButtonLogin(
-      {Key? key,
-      required this.context,
-      required this.title,
-      required this.onTap})
-      : super(key: key);
+  const ButtonLogin({
+    Key? key,
+    required this.title,
+    required this.onTap,
+  }) : super(key: key);
 
-  @override
-  State<ButtonLogin> createState() => _ButtonLoginState();
-}
-
-class _ButtonLoginState extends State<ButtonLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,24 +26,30 @@ class _ButtonLoginState extends State<ButtonLogin> {
           ],
         ),
       ),
-      child: ElevatedButton(
+      child: TextButton(
         onPressed: () {
-          widget.onTap();
+          onTap();
         },
-        // ignore: sort_child_properties_last
-        child: Text(
-          widget.title,
-          style: const TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w600, fontSize: 20),
-        ),
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-              (Set<MaterialState> states) {
-            if (states.contains(MaterialState.pressed)) return Colors.white70;
-            return Colors.transparent; // Set to transparent
-          }),
+            (Set<MaterialState> states) {
+              if (states.contains(MaterialState.pressed)) return Colors.white70;
+              return Colors.transparent; // Set to transparent
+            },
+          ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+          ),
+        ),
+        child: Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+          ),
         ),
       ),
     );
