@@ -132,7 +132,7 @@ class DetailView extends GetView<DetailController> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
 
