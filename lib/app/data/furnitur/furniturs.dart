@@ -45,11 +45,11 @@ var furnitureList = [
     rating: 9.2,
   ),
   Furniture(
-    name: 'Kraton',
-    imageAsset: 'lib/app/data/images/kraton.jpg',
+    name: 'Puncak Segoro',
+    imageAsset: 'lib/app/data/images/puncakSegoro.jpg',
     price: 30,
     description:
-        "Embrace Kraton's elegance in your home office. Effortlessly blend style, comfort, and smart storage for a chic and organized space.",
+        "Imbibe the sophistication of Puncak Sosorejo in your home office. Effortlessly fuse elegance, comfort, and smart storage for a chic and organized space.",
     producer: 'RAFI',
     rating: 7.3,
   ),
