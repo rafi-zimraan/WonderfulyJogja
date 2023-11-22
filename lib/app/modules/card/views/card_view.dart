@@ -70,7 +70,7 @@ class CardView extends GetView<CardController> {
                             ),
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.star,
                                   color: Colors.orange,
                                 ),
@@ -91,7 +91,7 @@ class CardView extends GetView<CardController> {
           );
         },
         itemCount: furnitureList.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, childAspectRatio: 2 / 3),
       ),
     );
